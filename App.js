@@ -7,6 +7,8 @@
  */
 
 import React, {Fragment, useState} from 'react';
+import React from 'react';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -23,7 +25,7 @@ const App = () => {
   const [world, setWorld] = useState(false);
 
   return (
-    <Fragment>
+    <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView testID="welcome">
         <View>
@@ -41,7 +43,7 @@ const App = () => {
           {world && <Text>World!!!</Text>}
         </View>
       </SafeAreaView>
-    </Fragment>
+    </>
   );
 };
 
