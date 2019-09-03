@@ -1,6 +1,6 @@
 describe('WebView basic test', () => {
   beforeEach(async () => {
-    await device.reloadReactNative();
+    await device.launchApp({newInstance: true});
   });
 
   it('should have a webview', async () => {
@@ -15,14 +15,4 @@ describe('WebView basic test', () => {
       .toHaveText('Hello from the webview!')
       .withTimeout(2000);
   });
-
-  // it('should show hello screen after tap', async () => {
-  //   await element(by.id('hello_button')).tap();
-  //   await expect(element(by.text('Hello!!!'))).toBeVisible();
-  // });
-
-  // it('should show world screen after tap', async () => {
-  //   await element(by.id('world_button')).tap();
-  //   await expect(element(by.text('World!!!'))).toBeVisible();
-  // });
 });
